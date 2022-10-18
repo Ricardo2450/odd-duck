@@ -1,0 +1,55 @@
+header {
+  width: auto;
+  height: 100px;
+  display: flex;
+  justify-content:left ;
+  /* justify-content:; */
+}
+
+header img {
+  width: 75px;
+  height: 100px;
+}
+
+main{
+  width: 1024px;
+  margin: 3rem auto;
+  display: grid;
+  grid-template-columns: 300px, 4fr, 4fr, 4fr;
+  grid-template-rows: 20 rem, 5rem, 15rem;
+}
+
+section img{
+  width: 480px;
+  max-height: 26rem;
+  border: 5px solid transparent;
+
+}
+
+section img:hover{
+border: 5px solid maroon;
+cursor: pointer;
+}
+
+
+.result-button{
+  background-color: grey;
+  color: aliceblue;
+  padding: .5rem 1 rem;
+  width: max-content;
+  height: max-content;
+  font-size: 1rem;
+  margin: 1rem;
+  pointer-events: none;
+}
+
+section + div.result-button {
+  background-color:blue ;
+  color: white;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+section + div.result-button:hover {
+  background-color: lightskyblue;
+}

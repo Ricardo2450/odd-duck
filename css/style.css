@@ -93,7 +93,7 @@ section img:hover {
 }
 
 main  div {
-  background-color: gray;
+  background-color: lightgray;
   color: gold;
   padding: .5rem, 1rem;
   width: max-content;
@@ -101,18 +101,20 @@ main  div {
   font-size: 1rem;
   margin: 1rem;
   pointer-events: none;
+  display: none;
 
 }
 
 main  div.clicks-allowed {
-  background-color:blue ;
-  color: white;
+  background-color: white ;
+  color: green;
   cursor: pointer;
   pointer-events: auto;
+  display: inline;
 }
 
 main  div.clicks-allowed:hover {
-  background-color: lightskyblue;
+  background-color: rgb(135, 250, 181);
 }
 
 article {

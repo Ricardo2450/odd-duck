@@ -1,4 +1,4 @@
-header {
+/* header {
   width: auto;
   height: 100px;
   display: flex;
@@ -6,23 +6,45 @@ header {
   /* justify-content:; */
 }
 
-header img {
+/* header img {
   width: 75px;
   height: 100px;
+} */
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Times New Roman', Times, serif;
+  background-color: blanchedalmond;
+  color: lightseagreen;
+}
+
+h1{
+  font-size: 3rem;
+  color: lightseagreen;
+  line-height: .8;
+  margin: 3rem 0 1rem;
+  grid-column: 2/6;
 }
 
 main{
-  width: 1024px;
+  max-width: 1024px;
   margin: 3rem auto;
   display: grid;
-  grid-template-columns: 300px, 4fr, 4fr, 4fr;
-  grid-template-rows: 20 rem, 5rem, 15rem;
+  grid-template-columns: 20%, 20%, 20%, 20%, 20%;
+  grid-template-rows: 20%, 20%, 20%, 20%, 20%, 20%;
 }
 
-section img{
-  width: 480px;
-  max-height: 26rem;
-  border: 5px solid transparent;
+#siteLogo{
+  padding-left: 20px;
+  width: 120px;
+  z-index: 2;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 1;
 
 }
 
@@ -32,24 +54,79 @@ cursor: pointer;
 }
 
 
-.result-button{
-  background-color: grey;
+div #result-button{
+  border: 5px solid black;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 5;
+  grid-row-end: 6;
+  /* background-color: grey;
   color: aliceblue;
   padding: .5rem 1 rem;
   width: max-content;
   height: max-content;
   font-size: 1rem;
   margin: 1rem;
-  pointer-events: none;
+  pointer-events: none; */
 }
 
-section + div.result-button {
+section{
+  background-color: tan;
+  grid-row: 2/4;
+  grid-column: 2/6;
+  display: flex;
+  justify-content: space-between;
+}
+
+section img {
+  width: 30%;
+  flex: 1 1 30%
+  max-height:400px;
+  border: 5px solid transparent;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+section img:hover {
+  border: 5px solid maroon;
+  cursor: pointer;
+}
+
+main  div {
+  background-color: gray;
+  color: gold;
+  padding: .5rem, 1rem;
+  width: max-content;
+  height: max-content;
+  font-size: 1rem;
+  margin: 1rem;
+  pointer-events: none;
+
+}
+
+main  div.clicks-allowed {
   background-color:blue ;
   color: white;
   cursor: pointer;
   pointer-events: auto;
 }
 
-section + div.result-button:hover {
+main  div.clicks-allowed:hover {
   background-color: lightskyblue;
+}
+
+article {
+  grid-column: 2/6 ;
+  grid-row: 4/5 ;
+  padding-bottom: 2rem;
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+}
+
+#myChart {
+grid-column: 2/6;
+grid-row: 6/7;
+background-color: aliceblue;
+display: none;
 }
